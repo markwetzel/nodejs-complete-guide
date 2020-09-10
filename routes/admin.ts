@@ -12,7 +12,14 @@ router.post('/add-product', (req, res, next) => {
 });
 
 router.get('/add-product', (req, res, next) => {
-  res.render('add-product', { pageTitle: 'Add Product' });
+  res.render('add-product', {
+    pageTitle: 'Add Product',
+    path: '/admin/add-product',
+    formsCSS: true,
+    productCSS: true,
+    activeAddProduct: true,
+    // layout: false,
+  });
 });
 
 exports.routes = router;
