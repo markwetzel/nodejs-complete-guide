@@ -3,18 +3,10 @@ import express = require('express');
 import path = require('path');
 const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
-const expressHandlebars = require('express-handlebars');
 
 const app = express();
 
-app.engine(
-  'handlebars',
-  expressHandlebars({
-    layoutsDir: 'views/layouts/',
-    defaultLayout: 'main-layout',
-  })
-);
-app.set('view engine', 'handlebars');
+app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 app.use(require('body-parser').urlencoded({ extended: false }));
