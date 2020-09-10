@@ -1,0 +1,11 @@
+{
+  "typeAcquisition": {
+    "enable": true
+  },
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "out",
+    "sourceMap": true
+  }
+}
